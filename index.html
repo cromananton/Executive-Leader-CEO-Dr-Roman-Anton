@@ -1,42 +1,714 @@
-<!-- HERO IMAGE -->
-<aside class="hero-card">
-    <img src="Images/portrait-main.jpg" alt="Dr. Roman Anton – Executive Portrait" class="hero-photo-main">
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Dr. Roman Anton – Executive Leadership & Board Governance</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="Executive Leadership Positioning Website for Dr. Roman Anton – CEO-ready, Board-level governance, Quality, Regulatory, Compliance and Enterprise Transformation.">
+    <style>
+        :root {
+            --bg: #0b1020;
+            --bg-alt: #111627;
+            --accent: #c89b3c;
+            --text: #f5f5f5;
+            --muted: #b0b7c9;
+            --border: #252b3f;
+            --font-main: "Segoe UI", system-ui, -apple-system, BlinkMacSystemFont, sans-serif;
+        }
 
-    <h2>Executive Snapshot</h2>
-    <p>
-        Doctorate and MBA‑qualified executive with international leadership footprint across Germany, USA and UK.
-        Proven track record in building high‑performing organizations, strengthening governance and delivering
-        measurable business impact in complex, regulated environments.
-    </p>
+        * {
+            box-sizing: border-box;
+        }
 
-    <div class="hero-metrics">
-        <div class="metric">
-            <div class="metric-label">Enterprise Leadership</div>
-            <div class="metric-value">15+ years</div>
+        body {
+            margin: 0;
+            font-family: var(--font-main);
+            background: radial-gradient(circle at top left, #1b2340 0, #050814 55%, #02030a 100%);
+            color: var(--text);
+            line-height: 1.6;
+        }
+
+        a {
+            color: var(--accent);
+            text-decoration: none;
+        }
+
+        a:hover {
+            text-decoration: underline;
+        }
+
+        header {
+            border-bottom: 1px solid var(--border);
+            background: rgba(5, 8, 20, 0.9);
+            backdrop-filter: blur(12px);
+            position: sticky;
+            top: 0;
+            z-index: 100;
+        }
+
+        .nav {
+            max-width: 1100px;
+            margin: 0 auto;
+            padding: 0.75rem 1.5rem;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+        }
+
+        .nav-brand {
+            font-weight: 600;
+            letter-spacing: 0.08em;
+            text-transform: uppercase;
+            font-size: 0.85rem;
+            color: var(--muted);
+        }
+
+        .nav-links {
+            display: flex;
+            gap: 1.25rem;
+            font-size: 0.9rem;
+        }
+
+        .nav-links a {
+            color: var(--muted);
+        }
+
+        .nav-links a:hover {
+            color: var(--accent);
+        }
+
+        .hero {
+            max-width: 1100px;
+            margin: 0 auto;
+            padding: 3.5rem 1.5rem 2.5rem;
+            display: grid;
+            grid-template-columns: minmax(0, 2.2fr) minmax(0, 1.4fr);
+            gap: 2.5rem;
+        }
+
+        .hero-title {
+            font-size: 2.4rem;
+            font-weight: 600;
+            letter-spacing: 0.04em;
+        }
+
+        .hero-subtitle {
+            margin-top: 0.75rem;
+            font-size: 1.05rem;
+            color: var(--muted);
+        }
+
+        .hero-tags {
+            margin-top: 1.25rem;
+            display: flex;
+            flex-wrap: wrap;
+            gap: 0.5rem;
+        }
+
+        .tag {
+            border-radius: 999px;
+            border: 1px solid var(--border);
+            padding: 0.25rem 0.75rem;
+            font-size: 0.8rem;
+            color: var(--muted);
+            background: rgba(10, 14, 30, 0.8);
+        }
+
+        .hero-highlight {
+            margin-top: 1.75rem;
+            padding: 1rem 1.25rem;
+            border-radius: 0.75rem;
+            border: 1px solid rgba(200, 155, 60, 0.35);
+            background: linear-gradient(135deg, rgba(200, 155, 60, 0.08), rgba(10, 14, 30, 0.9));
+            font-size: 0.95rem;
+        }
+
+        .hero-highlight strong {
+            color: var(--accent);
+        }
+
+        .hero-card {
+            border-radius: 1rem;
+            border: 1px solid var(--border);
+            background: radial-gradient(circle at top, #1b2340 0, #050814 55%);
+            padding: 1.75rem 1.5rem;
+            display: flex;
+            flex-direction: column;
+            gap: 1.25rem;
+        }
+
+        .hero-card h2 {
+            margin-top: 0;
+            font-size: 1.1rem;
+            text-transform: uppercase;
+            letter-spacing: 0.12em;
+            color: var(--muted);
+        }
+
+        .hero-card p {
+            font-size: 0.95rem;
+            color: var(--muted);
+        }
+
+        .hero-photo-main {
+            width: 100%;
+            border-radius: 0.9rem;
+            border: 1px solid var(--border);
+            object-fit: cover;
+        }
+
+        .hero-metrics {
+            display: grid;
+            grid-template-columns: repeat(2, minmax(0, 1fr));
+            gap: 0.75rem;
+        }
+
+        .metric {
+            border-radius: 0.75rem;
+            border: 1px solid var(--border);
+            padding: 0.75rem;
+            background: rgba(8, 12, 26, 0.9);
+        }
+
+        .metric-label {
+            font-size: 0.75rem;
+            text-transform: uppercase;
+            letter-spacing: 0.12em;
+            color: var(--muted);
+        }
+
+        .metric-value {
+            margin-top: 0.25rem;
+            font-size: 1rem;
+            font-weight: 600;
+        }
+
+        main {
+            max-width: 1100px;
+            margin: 0 auto;
+            padding: 0 1.5rem 3rem;
+        }
+
+        section {
+            margin-top: 2.75rem;
+        }
+
+        section h2 {
+            font-size: 1.4rem;
+            margin-bottom: 0.75rem;
+        }
+
+        .section-subtitle {
+            font-size: 0.95rem;
+            color: var(--muted);
+            margin-bottom: 1.5rem;
+        }
+
+        .grid-2 {
+            display: grid;
+            grid-template-columns: minmax(0, 1.4fr) minmax(0, 1.6fr);
+            gap: 2rem;
+        }
+
+        .card {
+            border-radius: 0.9rem;
+            border: 1px solid var(--border);
+            background: rgba(8, 12, 26, 0.9);
+            padding: 1.5rem;
+        }
+
+        .card h3 {
+            margin-top: 0;
+            font-size: 1.05rem;
+        }
+
+        .card ul {
+            margin: 0.75rem 0 0;
+            padding-left: 1.1rem;
+            font-size: 0.95rem;
+            color: var(--muted);
+        }
+
+        .card ul li {
+            margin-bottom: 0.4rem;
+        }
+
+        .pill-list {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 0.5rem;
+            margin-top: 0.75rem;
+        }
+
+        .pill {
+            border-radius: 999px;
+            border: 1px solid var(--border);
+            padding: 0.25rem 0.7rem;
+            font-size: 0.8rem;
+            color: var(--muted);
+            background: rgba(5, 8, 20, 0.9);
+        }
+
+        .timeline {
+            border-radius: 0.9rem;
+            border: 1px solid var(--border);
+            padding: 1.5rem;
+            background: rgba(5, 8, 20, 0.9);
+        }
+
+        .timeline-item {
+            margin-bottom: 1rem;
+            padding-bottom: 1rem;
+            border-bottom: 1px dashed var(--border);
+        }
+
+        .timeline-item:last-child {
+            border-bottom: none;
+            padding-bottom: 0;
+            margin-bottom: 0;
+        }
+
+        .timeline-role {
+            font-weight: 600;
+        }
+
+        .timeline-meta {
+            font-size: 0.85rem;
+            color: var(--muted);
+        }
+
+        .timeline-impact {
+            margin-top: 0.35rem;
+            font-size: 0.95rem;
+            color: var(--muted);
+        }
+
+        .columns-3 {
+            display: grid;
+            grid-template-columns: repeat(3, minmax(0, 1fr));
+            gap: 1.25rem;
+        }
+
+        .badge {
+            font-size: 0.8rem;
+            text-transform: uppercase;
+            letter-spacing: 0.12em;
+            color: var(--muted);
+            margin-bottom: 0.35rem;
+        }
+
+        .photo-strip {
+            display: grid;
+            grid-template-columns: repeat(3, minmax(0, 1fr));
+            gap: 0.75rem;
+            margin-top: 1rem;
+        }
+
+        .photo-strip img {
+            width: 100%;
+            border-radius: 0.75rem;
+            border: 1px solid var(--border);
+            object-fit: cover;
+        }
+
+        .contact {
+            border-radius: 0.9rem;
+            border: 1px solid var(--border);
+            background: linear-gradient(135deg, rgba(200, 155, 60, 0.12), rgba(5, 8, 20, 0.95));
+            padding: 1.75rem 1.5rem;
+        }
+
+        .contact h2 {
+            margin-top: 0;
+        }
+
+        .contact-grid {
+            display: grid;
+            grid-template-columns: minmax(0, 1.4fr) minmax(0, 1.6fr);
+            gap: 1.75rem;
+        }
+
+        .contact-info p {
+            margin: 0.25rem 0;
+            font-size: 0.95rem;
+        }
+
+        .contact-info span {
+            color: var(--muted);
+        }
+
+        .cta-button {
+            display: inline-block;
+            margin-top: 1rem;
+            padding: 0.6rem 1.4rem;
+            border-radius: 999px;
+            border: 1px solid rgba(200, 155, 60, 0.7);
+            background: rgba(200, 155, 60, 0.12);
+            color: var(--accent);
+            font-size: 0.9rem;
+            text-transform: uppercase;
+            letter-spacing: 0.12em;
+        }
+
+        .cta-button:hover {
+            background: rgba(200, 155, 60, 0.2);
+            text-decoration: none;
+        }
+
+        footer {
+            border-top: 1px solid var(--border);
+            padding: 1.5rem;
+            font-size: 0.8rem;
+            color: var(--muted);
+            text-align: center;
+            background: rgba(5, 8, 20, 0.95);
+        }
+
+        @media (max-width: 900px) {
+            .hero {
+                grid-template-columns: minmax(0, 1fr);
+            }
+            .hero-card {
+                order: -1;
+            }
+            .grid-2,
+            .contact-grid {
+                grid-template-columns: minmax(0, 1fr);
+            }
+            .columns-3 {
+                grid-template-columns: repeat(2, minmax(0, 1fr));
+            }
+            .photo-strip {
+                grid-template-columns: repeat(3, minmax(0, 1fr));
+            }
+        }
+
+        @media (max-width: 600px) {
+            .nav {
+                flex-direction: column;
+                align-items: flex-start;
+                gap: 0.5rem;
+            }
+            .columns-3 {
+                grid-template-columns: minmax(0, 1fr);
+            }
+            .photo-strip {
+                grid-template-columns: minmax(0, 1fr);
+            }
+        }
+    </style>
+</head>
+<body>
+<header>
+    <nav class="nav">
+        <div class="nav-brand">DR. ROMAN ANTON</div>
+        <div class="nav-links">
+            <a href="#about">Profile</a>
+            <a href="#philosophy">Leadership</a>
+            <a href="#governance">Governance</a>
+            <a href="#board">Board Experience</a>
+            <a href="#impact">Business Impact</a>
+            <a href="#media">Media & Speaking</a>
+            <a href="#contact">Contact</a>
         </div>
-        <div class="metric">
-            <div class="metric-label">Regulated Industries</div>
-            <div class="metric-value">MedTech, Pharma, Biotech, Diagnostics</div>
+    </nav>
+</header>
+
+<section class="hero">
+    <div>
+        <div class="hero-title">Executive Leadership & Board Governance</div>
+        <div class="hero-subtitle">
+            CEO‑ready executive leader with a multidisciplinary background in Quality, Regulatory, Compliance Governance,
+            Finance/Controlling, ERP/SAP Governance and Enterprise Transformation across regulated global industries.
         </div>
-        <div class="metric">
-            <div class="metric-label">Core Domains</div>
-            <div class="metric-value">Quality, Regulatory, Compliance, Finance, ERP</div>
+
+        <div class="hero-tags">
+            <span class="tag">CEO‑Ready | CQO | CRO | Board Director</span>
+            <span class="tag">Quality & Regulatory Leadership</span>
+            <span class="tag">Enterprise Governance & Compliance</span>
+            <span class="tag">Operational & Digital Transformation</span>
+            <span class="tag">MedTech · Pharma · Biotech · Diagnostics</span>
         </div>
-        <div class="metric">
-            <div class="metric-label">Leadership Scope</div>
-            <div class="metric-value">Global, Cross‑Functional, Enterprise‑Wide</div>
+
+        <div class="hero-highlight">
+            <strong>Strategic Value Proposition:</strong><br>
+            I partner with boards, CEOs and investors to design and lead enterprise‑wide transformation, governance and
+            performance systems that protect license to operate, unlock profitable growth and build resilient,
+            future‑ready organizations.
         </div>
     </div>
-</aside>
 
-<!-- 3‑IMAGE STRIP -->
-<section id="media">
-    <h2>Executive Portraits</h2>
-    <p class="section-subtitle">Professional executive photography for board‑level positioning.</p>
-
-    <div class="photo-strip">
-        <img src="Images/portrait-formal.jpg" alt="Formal Executive Portrait">
-        <img src="Images/portrait-board.jpg" alt="Board‑Ready Executive Portrait">
-        <img src="Images/portrait-governance.jpg" alt="Governance‑Focused Executive Portrait">
-    </div>
+    <aside class="hero-card">
+        <img src="images/headshot-main.jpg" alt="Dr. Roman Anton – Executive Portrait" class="hero-photo-main">
+        <h2>Executive Snapshot</h2>
+        <p>
+            Doctorate and MBA‑qualified executive with international leadership footprint across Germany, USA and UK.
+            Proven track record in building high‑performing organizations, strengthening governance and delivering
+            measurable business impact in complex, regulated environments.
+        </p>
+        <div class="hero-metrics">
+            <div class="metric">
+                <div class="metric-label">Enterprise Leadership</div>
+                <div class="metric-value">15+ years</div>
+            </div>
+            <div class="metric">
+                <div class="metric-label">Regulated Industries</div>
+                <div class="metric-value">MedTech, Pharma, Biotech, Diagnostics</div>
+            </div>
+            <div class="metric">
+                <div class="metric-label">Core Domains</div>
+                <div class="metric-value">Quality, Regulatory, Compliance, Finance, ERP</div>
+            </div>
+            <div class="metric">
+                <div class="metric-label">Leadership Scope</div>
+                <div class="metric-value">Global, Cross‑Functional, Enterprise‑Wide</div>
+            </div>
+        </div>
+    </aside>
 </section>
+
+<main>
+    <section id="about">
+        <h2>Executive profile</h2>
+        <p class="section-subtitle">
+            Multidisciplinary executive leader combining deep functional expertise with broad enterprise governance,
+            strategic transformation and board‑level exposure.
+        </p>
+        <div class="grid-2">
+            <div class="card">
+                <h3>Professional overview</h3>
+                <p>
+                    Dr. Roman Anton is an executive leader in Quality Management, Regulatory Affairs, Compliance Governance,
+                    Finance/Controlling and ERP/SAP Governance. He has led enterprise‑wide strategic, regulatory,
+                    operational and transformation initiatives across international organizations, aligning governance,
+                    risk and performance with long‑term value creation.
+                </p>
+                <p>
+                    His experience spans MedTech, Pharma, Biotechnology, Diagnostics and other highly regulated sectors,
+                    where he has built integrated management systems, strengthened board‑level oversight and enabled
+                    sustainable, profitable growth.
+                </p>
+                <div class="pill-list">
+                    <span class="pill">Executive Leadership</span>
+                    <span class="pill">Enterprise Governance</span>
+                    <span class="pill">Risk & Compliance</span>
+                    <span class="pill">Finance & Controlling</span>
+                    <span class="pill">ERP/SAP Governance</span>
+                    <span class="pill">Global Stakeholder Management</span>
+                </div>
+            </div>
+            <div class="timeline">
+                <div class="timeline-item">
+                    <div class="timeline-role">Chief Quality / Regulatory & Governance Leader</div>
+                    <div class="timeline-meta">Global MedTech / Life Sciences – Enterprise Scope</div>
+                    <div class="timeline-impact">
+                        Led integrated Quality, Regulatory and Compliance transformation, aligning global operations with
+                        board‑level governance, risk appetite and growth strategy.
+                    </div>
+                </div>
+                <div class="timeline-item">
+                    <div class="timeline-role">Enterprise Performance & ERP/SAP Governance Lead</div>
+                    <div class="timeline-meta">Multi‑site, cross‑functional organizations</div>
+                    <div class="timeline-impact">
+                        Designed and governed ERP/SAP and performance frameworks, improving transparency, decision‑making
+                        and financial control across the enterprise.
+                    </div>
+                </div>
+                <div class="timeline-item">
+                    <div class="timeline-role">Global Quality, Regulatory & Compliance Executive</div>
+                    <div class="timeline-meta">Regulated international markets</div>
+                    <div class="timeline-impact">
+                        Strengthened license to operate, reduced regulatory risk and enhanced market access through
+                        robust systems, culture and leadership.
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="philosophy">
+        <h2>Leadership philosophy</h2>
+        <p class="section-subtitle">
+            Board‑aligned, stakeholder‑centric leadership focused on governance, performance and sustainable value creation.
+        </p>
+        <div class="grid-2">
+            <div class="card">
+                <h3>Strategic leadership approach</h3>
+                <ul>
+                    <li><strong>Enterprise perspective:</strong> Connects Quality, Regulatory, Compliance, Finance and Operations into a single governance and performance narrative.</li>
+                    <li><strong>Board alignment:</strong> Translates complex risk, regulatory and operational realities into clear, actionable insights for boards and investors.</li>
+                    <li><strong>Transformation with accountability:</strong> Designs and leads change programs with measurable outcomes, clear ownership and disciplined execution.</li>
+                    <li><strong>People & culture:</strong> Builds high‑trust, high‑performance cultures where governance, ethics and innovation reinforce each other.</li>
+                </ul>
+            </div>
+            <div class="card">
+                <h3>Leadership principles</h3>
+                <ul>
+                    <li><strong>Integrity & transparency:</strong> Governance and compliance as enablers of trust and strategic freedom, not constraints.</li>
+                    <li><strong>Data‑driven decisions:</strong> Performance, risk and financial data integrated into board‑level decision‑making.</li>
+                    <li><strong>Stakeholder value:</strong> Balancing regulatory expectations, patient safety, customer value and shareholder returns.</li>
+                    <li><strong>Resilience & adaptability:</strong> Future‑ready organizations capable of navigating regulatory, technological and market disruption.</li>
+                </ul>
+            </div>
+        </div>
+    </section>
+
+    <section id="governance">
+        <h2>Governance, risk & compliance</h2>
+        <p class="section-subtitle">
+            Strengthening license to operate, board oversight and enterprise resilience through integrated governance frameworks.
+        </p>
+        <div class="columns-3">
+            <div class="card">
+                <div class="badge">Governance</div>
+                <h3>Enterprise governance frameworks</h3>
+                <ul>
+                    <li>Design and implementation of integrated Quality, Regulatory and Compliance management systems.</li>
+                    <li>Alignment of governance structures with board committees, executive leadership and operational realities.</li>
+                    <li>Clear lines of accountability, escalation and decision‑rights across functions and geographies.</li>
+                </ul>
+            </div>
+            <div class="card">
+                <div class="badge">Risk</div>
+                <h3>Regulatory & operational risk</h3>
+                <ul>
+                    <li>Proactive identification and mitigation of regulatory, quality and operational risks.</li>
+                    <li>Risk‑based approach to product lifecycle, market access and post‑market surveillance.</li>
+                    <li>Integration of risk appetite and tolerance into strategic and financial decision‑making.</li>
+                </ul>
+            </div>
+            <div class="card">
+                <div class="badge">Compliance</div>
+                <h3>Compliance & ethics</h3>
+                <ul>
+                    <li>Embedding compliance, ethics and quality into culture, leadership behaviours and incentives.</li>
+                    <li>Robust audit, monitoring and continuous improvement mechanisms.</li>
+                    <li>Transparent reporting to boards, regulators and key stakeholders.</li>
+                </ul>
+            </div>
+        </div>
+    </section>
+
+    <section id="board">
+        <h2>Board‑level engagement & experience</h2>
+        <p class="section-subtitle">
+            Trusted advisor to boards, executive committees and investors on governance, risk, performance and transformation.
+        </p>
+        <div class="grid-2">
+            <div class="card">
+                <h3>Board‑facing responsibilities</h3>
+                <ul>
+                    <li>Regular presentations to boards and audit/quality committees on risk, compliance and performance.</li>
+                    <li>Support for strategic decisions on market entry, product portfolio and regulatory strategy.</li>
+                    <li>Design of governance dashboards and reporting frameworks for board oversight.</li>
+                    <li>Participation in cross‑functional steering committees and transformation boards.</li>
+                </ul>
+            </div>
+            <div class="card">
+                <h3>Executive presence</h3>
+                <p>
+                    Consistent executive presence in high‑stakes environments, combining technical depth with clear,
+                    concise and actionable communication tailored to board and investor audiences.
+                </p>
+                <div class="photo-strip">
+                    <img src="images/headshot-1.jpg" alt="Executive portrait – formal profile">
+                    <img src="images/headshot-2.jpg" alt="Executive portrait – board-ready">
+                    <img src="images/headshot-3.jpg" alt="Executive portrait – governance focus">
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="impact">
+        <h2>Business impact & enterprise transformation</h2>
+        <p class="section-subtitle">
+            Measurable impact across quality, regulatory, compliance, finance and operational performance.
+        </p>
+        <div class="columns-3">
+            <div class="card">
+                <div class="badge">Transformation</div>
+                <h3>Enterprise‑wide programs</h3>
+                <ul>
+                    <li>Led multi‑year transformation of Quality and Regulatory systems across global sites.</li>
+                    <li>Integrated governance, risk and performance into a single enterprise framework.</li>
+                    <li>Improved audit outcomes, reduced non‑conformities and strengthened market access.</li>
+                </ul>
+            </div>
+            <div class="card">
+                <div class="badge">Performance</div>
+                <h3>Operational & financial performance</h3>
+                <ul>
+                    <li>Enhanced transparency and control through ERP/SAP governance and performance dashboards.</li>
+                    <li>Improved cost‑to‑quality ratios and reduced rework, scrap and compliance‑related costs.</li>
+                    <li>Aligned operational KPIs with strategic and financial objectives.</li>
+                </ul>
+            </div>
+            <div class="card">
+                <div class="badge">Value</div>
+                <h3>Strategic value creation</h3>
+                <ul>
+                    <li>Protected license to operate while enabling growth in regulated markets.</li>
+                    <li>Strengthened trust with regulators, customers and partners.</li>
+                    <li>Built resilient, future‑ready organizations capable of navigating disruption.</li>
+                </ul>
+            </div>
+        </div>
+    </section>
+
+    <section id="media">
+        <h2>Media, publications & speaking</h2>
+        <p class="section-subtitle">
+            Selected thought leadership, publications and speaking engagements on governance, quality, regulatory and transformation.
+        </p>
+        <div class="grid-2">
+            <div class="card">
+                <h3>Thought leadership</h3>
+                <ul>
+                    <li>Articles and papers on integrated governance and quality management in regulated industries.</li>
+                    <li>Contributions to professional associations and expert panels.</li>
+                    <li>Internal and external keynotes on transformation, compliance and enterprise performance.</li>
+                </ul>
+            </div>
+            <div class="card">
+                <h3>Speaking & panels</h3>
+                <ul>
+                    <li>Executive presentations to leadership teams and cross‑functional forums.</li>
+                    <li>Participation in industry conferences and roundtables.</li>
+                    <li>Moderation and facilitation of governance and risk workshops.</li>
+                </ul>
+            </div>
+        </div>
+    </section>
+
+    <section id="contact" class="contact">
+        <h2>Contact & executive search</h2>
+        <div class="contact-grid">
+            <div class="contact-info">
+                <p><span>Name:</span> Dr. Roman Anton</p>
+                <p><span>Location:</span> Germany · International leadership footprint (USA, UK)</p>
+                <p><span>Focus:</span> CEO‑ready executive roles, CQO, CRO, Board Director, Governance & Transformation mandates</p>
+                <p><span>Email:</span> [your.email@example.com]</p>
+                <p><span>LinkedIn:</span> [LinkedIn profile URL]</p>
+                <a href="mailto:your.email@example.com" class="cta-button">Request executive profile</a>
+            </div>
+            <div>
+                <p>
+                    For executive search firms, boards, investors and hiring stakeholders seeking a multidisciplinary
+                    leader in Quality, Regulatory, Compliance Governance, Finance/Controlling and ERP/SAP Governance,
+                    this platform provides a concise overview of my leadership journey, governance expertise and
+                    measurable business impact.
+                </p>
+                <p>
+                    I welcome confidential discussions regarding CEO, CQO, CRO, Board Director and enterprise
+                    transformation mandates in regulated, performance‑driven environments.
+                </p>
+            </div>
+        </div>
+    </section>
+</main>
+
+<footer>
+    © Dr. Roman Anton – Executive Leadership & Board Governance Platform
+</footer>
+</body>
+</html>
